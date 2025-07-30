@@ -107,17 +107,17 @@ A detailed description of the arguments is provided below for your reference:
 
 ### 2.3 Hardware Resource and Training Cost
 
-All experiments were conducted on an RTX A6000 GPU with 48 GB of memory. However, we believe that a more commonly available GPU with 16 GB of memory is sufficient to reproduce the results reported in the paper. For reference, the pseudo image generation time (sec) of 128 images on the RTX A6000 (with a batch size of 16) is listed below:
+All experiments were conducted on an RTX A6000 GPU with 48 GB of memory. However, we believe that a more commonly available GPU with 16 GB of memory is sufficient to reproduce the results reported in the paper. For reference, the reconstruction for ViT-B/32 require 6,593 sec, and the pseudo image generation time (sec) of 128 images on the RTX A6000 (with a batch size of 16) is listed below:
 
-| Method | RN50 | RN50x16 | ViT-B/32 | ViT-B/16 |
-|--------|------|---------|----------|----------|
-| BNS    | TODO | TODO    | NA       | NA       |
-| PSE    | NA   | NA      | TODO     | TODO     |
-| D4C    | TODO | TODO    | TODO     | TODO     |
+| Method | RN50  | RN50x16 | ViT-B/32 |    ViT-B/16   |
+|--------|-------|---------|----------|---------------|
+| BNS    | 1,280 | 9,515   | NA       | NA            |
+| PSE    | NA    | NA      | 3,488    | 44,398 (bs=8) |
+| D4C    | 1,623 | 12,491  | 1,434    | 5,346         |
 
 ## 3. Abstract
 
-TODO
+Data-Free Quantization (DFQ) offers a practical solution for model compression without requiring access to real data, making it particularly attractive in privacy-sensitive scenarios. While DFQ has shown promise for unimodal models, its extension to Vision-Language Models such as Contrastive Language-Image Pre-training (CLIP) models remains underexplored. In this work, we reveal that directly applying existing DFQ techniques to CLIP results in substantial performance degradation due to two key limitations: insufficient semantic content and low intra-image diversity in synthesized samples. To tackle these challenges, we propose D4C, a novel DFQ framework tailored for CLIP. D4C synthesizes semantically rich and structurally diverse pseudo images through three key components: (1) Prompt-Guided Semantic Injection aligns generated images with real-world semantics using text prompts; (2) Structural Contrastive Generation reproduces compositional structures of natural images by leveraging foreground-background contrastive synthesis; and (3) Perturbation-Aware Enhancement applies controlled perturbations to improve sample diversity and robustness. These components jointly empower D4C to synthesize images that are both semantically informative and structurally diverse, effectively bridging the performance gap of DFQ on CLIP. Extensive experiments validate the effectiveness of D4C, showing significant performance improvements. For example, under the W4A8 setting with CLIP ResNet-50 and ViT-B/32, D4C achieves Top-1 accuracy improvement of 12.4% and 18.9% on CIFAR-10, 6.8% and 19.7% on CIFAR-100, and 1.4% and 5.7% on ImageNet-1K in zero-shot classification, respectively.
 
 ## Acknowledgments
 
