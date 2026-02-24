@@ -119,6 +119,19 @@ All experiments were conducted on an RTX A6000 GPU with 48 GB of memory. However
 
 Data-Free Quantization (DFQ) offers a practical solution for model compression without requiring access to real data, making it particularly attractive in privacy-sensitive scenarios. While DFQ has shown promise for unimodal models, its extension to Vision-Language Models such as Contrastive Language-Image Pre-training (CLIP) models remains underexplored. In this work, we reveal that directly applying existing DFQ techniques to CLIP results in substantial performance degradation due to two key limitations: insufficient semantic content and low intra-image diversity in synthesized samples. To tackle these challenges, we propose D4C, a novel DFQ framework tailored for CLIP. D4C synthesizes semantically rich and structurally diverse pseudo images through three key components: (1) Prompt-Guided Semantic Injection aligns generated images with real-world semantics using text prompts; (2) Structural Contrastive Generation reproduces compositional structures of natural images by leveraging foreground-background contrastive synthesis; and (3) Perturbation-Aware Enhancement applies controlled perturbations to improve sample diversity and robustness. These components jointly empower D4C to synthesize images that are both semantically informative and structurally diverse, effectively bridging the performance gap of DFQ on CLIP. Extensive experiments validate the effectiveness of D4C, showing significant performance improvements on various bit-widths and models. For example, under the W4A8 setting with CLIP ResNet-50 and ViT-B/32, D4C achieves Top-1 accuracy improvement of 12.4% and 18.9% on CIFAR-10, 6.8% and 19.7% on CIFAR-100, and 1.4% and 5.7% on ImageNet-1K in zero-shot classification, respectively.
 
+## Citation
+
+If you find this repo is useful, please cite our paper. Thanks.
+
+```bibtex
+@article{zhang2025d4c,
+  title={D4C: Data-free Quantization for Contrastive Language-Image Pre-training Models},
+  author={Zhang, Wenlun and Zhong, Yunshan and Ding, Zihao and Li, Xinyu and Yoshioka, Kentaro},
+  journal={arXiv preprint arXiv:2511.15411},
+  year={2025}
+}
+```
+
 ## Acknowledgments
 
 Our work builds upon [QDrop](https://github.com/wimh966/QDrop), [CLIP](https://github.com/openai/CLIP), and [CLIP_benchmark](https://github.com/LAION-AI/CLIP_benchmark). We sincerely appreciate their pioneering efforts, which provided the foundation and codebase for developing and evaluating D4C.
