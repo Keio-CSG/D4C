@@ -1,4 +1,4 @@
-# D4C: Data-free Quantization for Contrastive  Language-Image Pre-training Models
+# D4C: Data-Free Quantization for Contrastive  Language-Image Pre-training Models
 
 ## 1. Environment Settings
 
@@ -125,7 +125,7 @@ If you find this repo is useful, please cite our paper. Thanks.
 
 ```bibtex
 @article{zhang2025d4c,
-  title={D4C: Data-free Quantization for Contrastive Language-Image Pre-training Models},
+  title={D4C: Data-Free Quantization for Contrastive Language-Image Pre-training Models},
   author={Zhang, Wenlun and Zhong, Yunshan and Ding, Zihao and Li, Xinyu and Yoshioka, Kentaro},
   journal={arXiv preprint arXiv:2511.15411},
   year={2025}
