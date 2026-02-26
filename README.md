@@ -117,6 +117,8 @@ All experiments were conducted on an RTX A6000 GPU with 48 GB of memory. However
 
 ## 3. Abstract
 
+<a href="https://arxiv.org/abs/2511.15411" target="_blank">Paper Link</a>
+
 Data-Free Quantization (DFQ) offers a practical solution for model compression without requiring access to real data, making it particularly attractive in privacy-sensitive scenarios. While DFQ has shown promise for unimodal models, its extension to Vision-Language Models such as Contrastive Language-Image Pre-training (CLIP) models remains underexplored. In this work, we reveal that directly applying existing DFQ techniques to CLIP results in substantial performance degradation due to two key limitations: insufficient semantic content and low intra-image diversity in synthesized samples. To tackle these challenges, we propose D4C, the first DFQ framework tailored for CLIP. D4C synthesizes semantically rich and structurally diverse pseudo images through three key components: \textbf{1)} Prompt-Guided Semantic Injection aligns generated images with real-world semantics using text prompts; \textbf{2)} Structural Contrastive Generation reproduces compositional structures of natural images by leveraging foreground-background contrastive synthesis; and \textbf{3)} Perturbation-Aware Enhancement applies controlled perturbations to improve sample diversity and robustness. These components jointly empower D4C to synthesize images that are both semantically informative and structurally diverse, effectively bridging the performance gap of DFQ on CLIP. Extensive experiments validate the effectiveness of D4C, showing significant performance improvements on various bit-widths and models.
 
 ## Citation
