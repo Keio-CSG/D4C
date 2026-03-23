@@ -1,5 +1,7 @@
 # D4C: Data-Free Quantization for Contrastive  Language-Image Pre-training Models
 
+![D4C Overview](assets/overview.png)
+
 ## 1. Environment Settings
 
 ### 1.1 Create Environment
