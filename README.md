@@ -121,7 +121,7 @@ All experiments were conducted on an RTX A6000 GPU with 48 GB of memory. However
 
 ## 3. Abstract
 
-<a href="https://arxiv.org/abs/2511.15411" target="_blank">Paper Link</a>
+<a href="https://openaccess.thecvf.com/content/CVPR2026F/html/Zhang_D4C_Data-Free_Quantization_for_Contrastive_Language-Image_Pre-Training_Models_CVPRF_2026_paper.html" target="_blank">Paper Link</a>
 
 Data-Free Quantization (DFQ) offers a practical solution for model compression without requiring access to real data, making it particularly attractive in privacy-sensitive scenarios. While DFQ has shown promise for unimodal models, its extension to Vision-Language Models such as Contrastive Language-Image Pre-training (CLIP) models remains underexplored. In this work, we reveal that directly applying existing DFQ techniques to CLIP results in substantial performance degradation due to two key limitations: insufficient semantic content and low intra-image diversity in synthesized samples. To tackle these challenges, we propose D4C, the first DFQ framework tailored for CLIP. D4C synthesizes semantically rich and structurally diverse pseudo images through three key components: \textbf{1)} Prompt-Guided Semantic Injection aligns generated images with real-world semantics using text prompts; \textbf{2)} Structural Contrastive Generation reproduces compositional structures of natural images by leveraging foreground-background contrastive synthesis; and \textbf{3)} Perturbation-Aware Enhancement applies controlled perturbations to improve sample diversity and robustness. These components jointly empower D4C to synthesize images that are both semantically informative and structurally diverse, effectively bridging the performance gap of DFQ on CLIP. Extensive experiments validate the effectiveness of D4C, showing significant performance improvements on various bit-widths and models.
 
@@ -130,11 +130,12 @@ Data-Free Quantization (DFQ) offers a practical solution for model compression w
 If you find this repo is useful, please cite our paper. Thanks.
 
 ```bibtex
-@article{zhang2025d4c,
+@inproceedings{zhang2026d4c,
   title={D4C: Data-Free Quantization for Contrastive Language-Image Pre-training Models},
   author={Zhang, Wenlun and Zhong, Yunshan and Ding, Zihao and Li, Xinyu and Yoshioka, Kentaro},
-  journal={arXiv preprint arXiv:2511.15411},
-  year={2025}
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={2978--2987},
+  year={2026}
 }
 ```
 
